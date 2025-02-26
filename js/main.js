@@ -2,7 +2,9 @@
     "use strict";
 
   // AOS ANIMATIONS
-  AOS.init();
+  if (typeof AOS !== 'undefined') {
+    AOS.init();
+  }
 
   // NAVBAR TOGGLE ON LINK CLICK
     $('.navbar-nav .nav-link').click(function () {
@@ -27,31 +29,34 @@
                 );
             }
         }
-    });
-
   // STICKY NAVBAR
     $(document).ready(function () {
-        $('.navbar').sticky({ topSpacing: 0 });
+        if ($.fn.sticky) {
+            $('.navbar').sticky({ topSpacing: 0 });
+        }
     });
 
   // MAGNIFIC POPUP FOR IMAGES
     $(document).ready(function () {
-        $('.image-popup').magnificPopup({
-            type: 'image',
-            removalDelay: 300,
-            mainClass: 'mfp-with-zoom',
-            gallery: {
-              enabled: true,
-            },
-            zoom: {
-                enabled: true,
-                duration: 300,
-                easing: 'ease-in-out',
-                opener: function (openerElement) {
-                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+        if ($.fn.magnificPopup) {
+            $('.image-popup').magnificPopup({
+                type: 'image',
+                removalDelay: 300,
+                mainClass: 'mfp-with-zoom',
+                gallery: {
+                  enabled: true,
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300,
+                    easing: 'ease-in-out',
+                    opener: function (openerElement) {
+                        return openerElement.is('img') ? openerElement : openerElement.find('img');
+                  },
               },
-          },
-        });
+            });
+        }
     });
+  });
 
 })(window.jQuery);
