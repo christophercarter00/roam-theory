@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A brief description of this theory post goes here.">
+  <meta name="description" content="Detailed exploration of individual theories at Roam Theory.">
   <meta name="author" content="Your Name">
-  <title>Theory Title - Roam Theory</title>
+  <title>{{ Theory Title }} - Roam Theory</title>
   <!-- CSS FILES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <link href="../css/aos.css" rel="stylesheet">
   <link href="../css/roam-theory.css" rel="stylesheet">
-  <!-- You can add additional CSS or meta tags for SEO/social sharing as needed -->
 </head>
 <body>
-  <!-- NAVIGATION -->
   <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container">
       <a class="navbar-brand" href="../index.html"><strong>Roam Theory</strong></a>
@@ -35,39 +36,31 @@
       </div>
     </div>
   </nav>
-
-  <!-- MAIN CONTENT -->
   <main class="container mt-5">
     <article>
       <header>
-        <h1>Theory Title Here</h1>
-        <p class="date">Published on: [Insert Date]</p>
-        <!-- Replace with your featured image -->
-        <img src="../images/theories/your-image.jpg" alt="A descriptive alt text for the image" class="img-fluid mb-4">
+        <h1>{{ Theory Title }}</h1>
+        <p class="date">Published on: {{ Publish Date }}</p>
+        <img src="../images/theories/{{ Image File Name }}" alt="{{ Image Alt Text }}" class="img-fluid mb-4">
       </header>
 
       <section class="post-body">
-        <p>This is the opening paragraph of your theory post. Here you introduce the topic and provide a hook for the reader.</p>
-        <p>Continue with your main content—break your text into multiple paragraphs, add quotes, images, or other media as needed. This is where you dive into your insights and details about the theory.</p>
-        <!-- Add more paragraphs and content blocks as needed -->
+        {{ Main Content }}
       </section>
 
       <footer class="post-footer">
-        <p>Tags: <span>#example</span> <span>#theory</span></p>
+        <p>Tags: <span>#tag1</span> <span>#tag2</span> ...</p>
       </footer>
     </article>
   </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer text-center py-4">
-    <div class="container">
-      <p>&copy; 2025 Roam Theory | Designed with passion and purpose.</p>
-    </div>
+  <footer class="text-center py-4">
+    <p>&copy; 2025 Roam Theory | Designed with passion and purpose.</p>
   </footer>
-
   <!-- JAVASCRIPT FILES -->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
   <script src="../js/main.js" defer></script>
 </body>
 </html>

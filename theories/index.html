@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Roam Theory explores movement, meaning, and the deeper side of travel.">
+  <meta name="description" content="Explore detailed theories at Roam Theory, diving deeper into travel experiences and insights.">
   <meta name="author" content="Your Name">
   <title>Theories - Roam Theory</title>
   <!-- CSS FILES -->
@@ -39,9 +39,9 @@
   </nav>
   <main class="container mt-5">
     <h1 class="text-center">Roam Theories</h1>
-    <!-- Cover Image Section (keeping existing image name) -->
+    <!-- Cover Image Section -->
     <div class="blog-cover-container text-center mb-4">
-      <img src="../images/TheoryCover.JPG" alt="Cover Image" class="blog-cover" loading="lazy">
+      <img src="/images/theories/theorycover1.jpg" alt="Cover Image" class="blog-cover" loading="lazy">
     </div>
     <div class="row" id="blog-posts">
       <!-- Theories will be inserted here dynamically -->
@@ -59,7 +59,7 @@
   <script src="../js/main.js" defer></script>
   <script>
     // Fetch theories posts (ensure your JSON file is named accordingly)
-    fetch("theories/theory-posts.json")
+    fetch("theory-posts.json")
       .then(response => response.json())
       .then(posts => {
           const container = document.getElementById("blog-posts");
