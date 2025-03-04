@@ -42,7 +42,7 @@
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#theories">Theories</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog/index.html">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="#roam-maps">Roam Maps</a></li>
                             <li class="nav-item"><a class="nav-link" href="#theory-lab">Theory Lab</a></li>
                             <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
@@ -71,13 +71,12 @@
                 </div>
             </section>
             <section id="theories" class="blog-grid">
-                <article class="blog-post" data-aos="fade-up">
-                    <img src="images/blogcover1.JPG" alt="Embracing Imperfection">
-                    <h2>Embracing Imperfection</h2>
-                    <p class="date">22 February 2025</p>
-                    <p>Perfectionism has held me back from sharing my work. This is my journey...</p>
-                    <p class="tags">#growth #creativity</p>
-                </article>
+                <div class="container">
+                    <h1 class="text-center mb-5">Latest Theories</h1>
+                    <div class="row" id="blog-posts">
+                        <!-- Blog posts will be inserted here dynamically -->
+                    </div>
+                </div>
             </section>
             <footer>
                 <p>&copy; 2025 Roam Theory | Designed with passion and purpose.</p>
@@ -89,5 +88,27 @@
             <script src="js/aos.js"></script>
             <script src="js/jquery.magnific-popup.min.js"></script>
             <script src="js/main.js" defer></script>
+            <script>
+                fetch("blog/blog-posts.json")
+                    .then(response => response.json())
+                    .then(posts => {
+                        const container = document.getElementById("blog-posts");
+                        posts.forEach(post => {
+                            const postHTML = `
+                                <div class="col-md-4 mb-4">
+                                    <div class="card">
+                                        <img src="images/blog/${post.image}" class="card-img-top" alt="${post.title}">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${post.title}</h5>
+                                            <p class="card-text">${post.description}</p>
+                                            <a href="blog/${post.link}" class="btn btn-primary">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            container.innerHTML += postHTML;
+                        });
+                    });
+            </script>
         </body>
 </html>

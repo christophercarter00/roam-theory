@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog - Roam Theory</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/roam-theory.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><strong>Roam Theory</strong></a>
+    </div>
+  </nav>
+  <main class="container mt-5">
+    <h1 class="text-center">Roam Theory Blog</h1>
+    <!-- Blog Cover Image -->
+    <div class="blog-cover-container text-center mb-4">
+      <img src="../images/blogcover1-1200.jpg" alt="Blog Cover" class="blog-cover" loading="lazy">
+    </div>
+    <div class="row" id="blog-posts">
+      <!-- Blog posts will be inserted here dynamically -->
+    </div>
+  </main>
+  <footer class="text-center py-4">
+    <p>&copy; 2025 Roam Theory | Designed with passion and purpose.</p>
+  </footer>
+  <script>
+    const posts = [
+      {
+        title: "My First Blog Post",
+        description: "An introduction to my journey and Roam Theory.",
+        link: "my-first-post.html",
+        image: "../images/post1-thumbnail.jpg"
+      },
+      {
+        title: "Exploring the Unknown",
+        description: "A deep dive into embracing uncertainty in travel and life.",
+        link: "second-article.html",
+        image: "../images/post2-thumbnail.jpg"
+      }
+    ];
+
+    const container = document.getElementById("blog-posts");
+    let postsHTML = '';
+    posts.forEach(post => {
+      postsHTML += `
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="${post.image}" loading="lazy" class="card-img-top" alt="${post.title}">
+            <div class="card-body">
+              <h5 class="card-title">${post.title}</h5>
+              <p class="card-text">${post.description}</p>
+              <a href="${post.link}" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    container.innerHTML = postsHTML;
+  </script>
+</body>
+</html>
