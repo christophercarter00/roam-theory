@@ -3,12 +3,12 @@
     "title": "My First Theory",
     "description": "An introduction to the insights behind Roam Theory.",
     "link": "my-first-theory.html",
-    "image": "theory1.jpg"
+    "image": "images/theories/blogcover1-1200.jpg"
   },
   {
     "title": "Exploring the Unknown",
     "description": "A deep dive into embracing uncertainty in travel and life.",
     "link": "exploring-unknown.html",
-    "image": "theory2.jpg"
+    "image": "images/theories/theory2.jpg"
   }
 ]
