@@ -1,116 +1,167 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Roam Theory explores movement, meaning, and the deeper side of travel.">
-        <meta name="author" content="Your Name">
-        <title>Roam Theory</title>
-        <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link href="css/aos.css" rel="stylesheet">
-        <link href="css/roam-theory.css" rel="stylesheet">
-    </head>
-    
-    <body>
-        <main>
-            <section class="hero" id="hero">
-                <div class="heroText" data-aos="fade-up">
-                    <h1 class="text-white mt-5 mb-lg-4">The Roam Theory</h1>
-                    <p class="text-secondary-white-color">Exploring movement, meaning, and the deeper side of travel.</p>
-                </div>
-                <div class="heroImage">
-                    <img src="images/hero-banner.jpg" alt="Hero Banner" class="img-fluid">
-                </div>
-                <div class="overlay"></div>
-            </section>
-            <nav class="navbar navbar-expand-lg bg-light shadow-lg" data-bs-spy="scroll" data-bs-target="#navbarNav">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html"><strong>Roam Theory</strong></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                            <!-- Updated from Blog to Theories -->
-                            <li class="nav-item"><a class="nav-link" href="theories/index.html">Theories</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#roam-maps">Roam Maps</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#theory-lab">Theory Lab</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <section id="about">
-                <div class="container">
-                    <h1>About Roam Theory</h1>
-                    <p>Travel isn’t just about reaching new places—it’s about the shift that happens inside you along the way. 
-                       It’s about the moments in between, the late-night drives, the unexpected detours, the silence of an open road beneath an endless sky.</p>
-                
-                    <p><strong>Roam Theory</strong> is about chasing those moments. The ones that stop you in your tracks. 
-                       The ones that make you rethink everything you thought you knew.</p>
-                
-                    <p>Because movement—whether across cities, ideas, or mindsets—is what fuels growth. 
-                       And the truth is, there’s no growth if you don’t roam.</p>
-                
-                    <p>This isn’t a travel journal. It’s a way of seeing. A philosophy built on curiosity, experience, 
-                       and the belief that every journey—no matter how big or small—has something to teach us.</p>
-                
-                    <p>If you’ve ever felt the pull of the unknown, the need to move, to explore, to understand—then you already know 
-                       <strong>The Roam Theory</strong>.</p>
-                </div>
-            </section>
-            <!-- Updated section heading from Blogs to Theories -->
-            <section id="theories" class="blog-grid">
-                <div class="container">
-                    <h1 class="text-center mb-5">Latest Theories</h1>
-                    <div class="row" id="blog-posts">
-                        <!-- Theories will be inserted here dynamically -->
-                    </div>
-                </div>
-            </section>
-            <footer>
-                <p>&copy; 2025 Roam Theory | Designed with passion and purpose.</p>
-            </footer>
-            <!-- JAVASCRIPT FILES -->
-            <script src="js/jquery.min.js"></script>
-            <script src="js/jquery.sticky.js"></script>
-            <script src="js/bootstrap.bundle.min.js"></script>
-            <script src="js/aos.js"></script>
-            <script src="js/jquery.magnific-popup.min.js"></script>
-            <script src="js/main.js" defer></script>
-            <script>
-                // Updated fetch to load theories JSON instead of blog JSON (if renamed accordingly)
-                fetch("theories/theory-posts.json")
-                    .then(response => response.json())
-                    .then(posts => {
-                        const container = document.getElementById("blog-posts");
-                        posts.forEach(post => {
-                            const postHTML = `
-                                <div class="col-md-4 mb-4">
-                                    <div class="card">
-                                        <img src="images/theories/${post.image}" loading="lazy" class="card-img-top" alt="${post.title}">
-                                        <div class="card-body">
-                                            <h5 class="card-title">${post.title}</h5>
-                                            <p class="card-text">${post.description}</p>
-                                            <a href="theories/${post.link}" class="btn btn-primary">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            `;
-                            container.innerHTML += postHTML;
-                        });
-                    })
-                    .catch(error => console.error("Error fetching theories:", error));
-            </script>
-        </main>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Roam Theory explores movement, meaning, and the deeper side of travel.">
+  <meta name="author" content="Your Name">
+  <title>Roam Theory</title>
+  <!-- CSS FILES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link href="css/aos.css" rel="stylesheet">
+  <link href="css/roam-theory.css" rel="stylesheet">
+  <style>
+    /* Optional: Add smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Section spacing */
+    section {
+      padding: 80px 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="heroText" data-aos="fade-up">
+        <h1 class="text-white mt-5 mb-lg-4">The Roam Theory</h1>
+        <p class="text-secondary-white-color">Exploring movement, meaning, and the deeper side of travel.</p>
+      </div>
+      <div class="heroImage">
+        <img src="images/hero-banner.jpg" alt="Hero Banner" class="img-fluid">
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg" data-bs-spy="scroll" data-bs-target="#navbarNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><strong>Roam Theory</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#theories">Theories</a></li>
+            <li class="nav-item"><a class="nav-link" href="#roam-maps">Roam Maps</a></li>
+            <li class="nav-item"><a class="nav-link" href="#theory-lab">Theory Lab</a></li>
+            <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="container">
+        <h2>About Roam Theory</h2>
+        <p>Travel isn’t just about reaching new places—it’s about the shift that happens inside you along the way. 
+           It’s about the moments in between, the late-night drives, the unexpected detours, the silence of an open road beneath an endless sky.</p>
+        <p><strong>Roam Theory</strong> is about chasing those moments. The ones that stop you in your tracks. 
+           The ones that make you rethink everything you thought you knew.</p>
+        <p>Because movement—whether across cities, ideas, or mindsets—is what fuels growth. 
+           And the truth is, there’s no growth if you don’t roam.</p>
+        <p>This isn’t a travel journal. It’s a way of seeing. A philosophy built on curiosity, experience, 
+           and the belief that every journey—no matter how big or small—has something to teach us.</p>
+        <p>If you’ve ever felt the pull of the unknown, the need to move, to explore, to understand—then you already know 
+           <strong>The Roam Theory</strong>.</p>
+      </div>
+    </section>
+
+    <!-- THEORIES SECTION -->
+    <section id="theories" class="blog-grid">
+      <div class="container">
+        <h2>Latest Theories</h2>
+        <div class="row" id="blog-posts">
+          <!-- Theories will be inserted here dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ROAM MAPS SECTION -->
+    <section id="roam-maps">
+      <div class="container">
+        <h2>Roam Maps</h2>
+        <p>Explore our curated maps that guide you through destinations and hidden gems around the world.</p>
+        <!-- Add your content or embed maps here -->
+      </div>
+    </section>
+
+    <!-- THEORY LAB SECTION -->
+    <section id="theory-lab">
+      <div class="container">
+        <h2>Theory Lab</h2>
+        <p>Discover experiments, discussions, and deep dives into travel philosophy and innovative ideas.</p>
+        <!-- Add your content or interactive elements here -->
+      </div>
+    </section>
+
+    <!-- SHOP SECTION -->
+    <section id="shop">
+      <div class="container">
+        <h2>Shop</h2>
+        <p>Browse our collection of curated travel gear, books, and merchandise inspired by the Roam Theory.</p>
+        <!-- Add product listings or links here -->
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Have questions, ideas, or just want to share your journey? Get in touch with us!</p>
+        <!-- Add a contact form or contact details here -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer text-center py-4">
+      <div class="container">
+        <p>&copy; 2025 Roam Theory | Designed with passion and purpose.</p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script>
+      // Fetch theories posts (ensure your JSON file is named accordingly)
+      fetch("theories/theory-posts.json")
+          .then(response => response.json())
+          .then(posts => {
+              const container = document.getElementById("blog-posts");
+              posts.forEach(post => {
+                  const postHTML = `
+                      <div class="col-md-4 mb-4">
+                          <div class="card">
+                              <img src="images/theories/${post.image}" loading="lazy" class="card-img-top" alt="${post.title}">
+                              <div class="card-body">
+                                  <h5 class="card-title">${post.title}</h5>
+                                  <p class="card-text">${post.description}</p>
+                                  <a href="theories/${post.link}" class="btn btn-primary">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                  `;
+                  container.innerHTML += postHTML;
+              });
+          })
+          .catch(error => console.error("Error fetching theories:", error));
+    </script>
+  </main>
+</body>
 </html>
