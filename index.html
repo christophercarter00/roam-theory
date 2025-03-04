@@ -3,12 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta name="description" content="">
-        <meta name="author" content="">
-
+        <meta name="description" content="Roam Theory explores movement, meaning, and the deeper side of travel.">
+        <meta name="author" content="Your Name">
         <title>Roam Theory</title>
-
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +39,8 @@
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog/index.html">Blog</a></li>
+                            <!-- Updated from Blog to Theories -->
+                            <li class="nav-item"><a class="nav-link" href="theories/index.html">Theories</a></li>
                             <li class="nav-item"><a class="nav-link" href="#roam-maps">Roam Maps</a></li>
                             <li class="nav-item"><a class="nav-link" href="#theory-lab">Theory Lab</a></li>
                             <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
@@ -70,11 +68,12 @@
                        <strong>The Roam Theory</strong>.</p>
                 </div>
             </section>
+            <!-- Updated section heading from Blogs to Theories -->
             <section id="theories" class="blog-grid">
                 <div class="container">
                     <h1 class="text-center mb-5">Latest Theories</h1>
                     <div class="row" id="blog-posts">
-                        <!-- Blog posts will be inserted here dynamically -->
+                        <!-- Theories will be inserted here dynamically -->
                     </div>
                 </div>
             </section>
@@ -89,7 +88,8 @@
             <script src="js/jquery.magnific-popup.min.js"></script>
             <script src="js/main.js" defer></script>
             <script>
-                fetch("blog/blog-posts.json")
+                // Updated fetch to load theories JSON instead of blog JSON (if renamed accordingly)
+                fetch("theories/theory-posts.json")
                     .then(response => response.json())
                     .then(posts => {
                         const container = document.getElementById("blog-posts");
@@ -97,18 +97,20 @@
                             const postHTML = `
                                 <div class="col-md-4 mb-4">
                                     <div class="card">
-                                        <img src="images/blog/${post.image}" class="card-img-top" alt="${post.title}">
+                                        <img src="images/theories/${post.image}" loading="lazy" class="card-img-top" alt="${post.title}">
                                         <div class="card-body">
                                             <h5 class="card-title">${post.title}</h5>
                                             <p class="card-text">${post.description}</p>
-                                            <a href="blog/${post.link}" class="btn btn-primary">Read More</a>
+                                            <a href="theories/${post.link}" class="btn btn-primary">Read More</a>
                                         </div>
                                     </div>
                                 </div>
                             `;
                             container.innerHTML += postHTML;
                         });
-                    });
+                    })
+                    .catch(error => console.error("Error fetching theories:", error));
             </script>
-        </body>
+        </main>
+    </body>
 </html>
