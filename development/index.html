@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roam Theory - Home</title>
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- HERO SECTION WITH PHOTO BACKGROUND -->
+    <section class="hero" id="hero" style="background: url('images/hero.jpg') no-repeat center center; background-size: cover;">
+      <div class="container text-center text-white py-5">
+        <h1>The Roam Theory</h1>
+        <p>Create a great website experience</p>
+      </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Roam Theory</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="theory-lab/index.html">Theory Lab</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery/index.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog/index.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="maps/index.html">My Travels</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- ABOUT OVERVIEW SECTION -->
+      <section id="about-overview" class="container my-5">
+        <h2>About</h2>
+        <p>This is a brief summary about Roam Theory. It gives an overview of who we are and what we do. <a href="about.html">Read more</a></p>
+      </section>
+
+      <!-- THEORY LAB OVERVIEW SECTION -->
+      <section id="theory-lab-overview" class="container my-5">
+        <h2>Theory Lab</h2>
+        <div id="theory-lab-dynamic">
+          <!-- Dynamic content: recent posts from the Theory Lab folder will be loaded here -->
+          <p>Recent Theory Lab posts will appear here.</p>
+        </div>
+        <a href="theory-lab/index.html" class="btn btn-primary">Visit Theory Lab</a>
+      </section>
+
+      <!-- GALLERY OVERVIEW SECTION -->
+      <section id="gallery-overview" class="container my-5">
+        <h2>Gallery</h2>
+        <div id="gallery-dynamic" class="row">
+          <!-- Example album overview -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="gallery/images/album1-cover.jpg" class="card-img-top" alt="Album 1">
+              <div class="card-body">
+                <h5 class="card-title">Album 1</h5>
+                <p class="card-text">A brief album description.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Additional album cards can be added here -->
+        </div>
+        <a href="gallery/index.html" class="btn btn-primary">View Gallery</a>
+      </section>
+
+      <!-- BLOG OVERVIEW SECTION -->
+      <section id="blog-overview" class="container my-5">
+        <h2>Blog</h2>
+        <div id="blog-dynamic" class="row">
+          <!-- Example blog post overview -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="blog/images/post1-cover.jpg" class="card-img-top" alt="Post 1">
+              <div class="card-body">
+                <h5 class="card-title">Blog Post Title 1</h5>
+                <p class="card-text">A short subheader for post 1.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Two more post previews should be dynamically loaded here -->
+        </div>
+        <a href="blog/index.html" class="btn btn-primary">View All Posts</a>
+      </section>
+
+      <!-- MY TRAVELS (MAPS) OVERVIEW SECTION -->
+      <section id="maps-overview" class="container my-5">
+        <h2>My Travels</h2>
+        <div id="maps-dynamic">
+          <!-- Placeholder for a representative map or travel image -->
+          <img src="maps/images/map-cover.jpg" alt="My Travels" class="img-fluid">
+        </div>
+        <a href="maps/index.html" class="btn btn-primary">Explore My Travels</a>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="container my-5">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email <sup class="text-danger">*</sup></label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" rows="5" class="form-control" id="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-light text-center py-3">
+      <div class="container">
+        <p>&copy; 2025 Roam Theory. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
