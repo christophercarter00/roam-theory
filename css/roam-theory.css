@@ -71,7 +71,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../images/hero-banner.jpg') no-repeat center center; 
+  background: url('../images/hero-banner.jpg') no-repeat;
+  background-size; cover;
   color: var(--white-color);
   overflow: hidden;
 }
