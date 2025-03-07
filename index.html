@@ -28,10 +28,12 @@
       .hero {
         position: relative;
         overflow: hidden;
+        height: 100vh; /* Make the hero section take the full viewport height */
       }
       .heroImage img {
         width: 100%;
-        height: auto;
+        height: 100%; /* Make the image take the full height of the hero section */
+        object-fit: cover; /* Ensure the image covers the entire area without distortion */
       }
       .overlay {
         position: absolute;
@@ -39,7 +41,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
+        background: transparent; /* Adjust the overlay color and opacity as needed */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,11 +54,11 @@
     <!-- HERO SECTION -->
     <section class="hero" id="hero">
       <div class="heroText text-center" data-aos="fade-up">
-        <h1 class="text-white mt-5 mb-lg-4">The Roam Theory</h1>
-        <p class="text-secondary-white-color">Exploring movement, meaning, and the deeper side of travel.</p>
+      <h1 class="text-white mt-5 mb-lg-4">The Roam Theory</h1>
+      <p class="text-secondary-white-color">Exploring movement, meaning, and the deeper side of travel.</p>
       </div>
       <div class="heroImage">
-        <img src="images/hero-banner.jpg" alt="Hero Banner" class="img-fluid mx-auto d-block">
+      <img src="images/hero-banner.jpg" alt="Hero Banner" class="img-fluid mx-auto d-block" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="overlay"></div>
     </section>
